@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories { mavenCentral() }
+
+ext {
+  akkaVersion = '2.4.17'
+  scalaVersion = '2.12'
+  junitVersion = '4.12'
+}
+
+dependencies {
+  compile group: 'com.typesafe.akka', name: "akka-actor_$scalaVersion", version: akkaVersion
+  testCompile group: 'junit', name: 'junit', version: junitVersion
+}
